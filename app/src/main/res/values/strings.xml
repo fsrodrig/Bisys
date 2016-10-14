@@ -11,4 +11,9 @@
     <string name="apellido">Apellido</string>
     <string name="dni">DNI</string>
     <string name="crear">Crear</string>
+    <string name="email">E-mail</string>
+    <string name="buscar">Buscar Bici</string>
+    <string name="buscarTerminal">En que Terminal Estás?</string>
+    <string name="ingresarTerminal">Ingresá el número de Terminal</string>
+
 </resources>
