@@ -15,5 +15,8 @@
     <string name="buscar">Buscar Bici</string>
     <string name="buscarTerminal">En que Terminal Estás?</string>
     <string name="ingresarTerminal">Ingresá el número de Terminal</string>
+    <string name="elegir">Elegí la Bici a Reservar</string>
+    <string name="cancelar">Cancelar Turno</string>
+    <string name="retirar">Retirar Bici</string>
 
 </resources>
