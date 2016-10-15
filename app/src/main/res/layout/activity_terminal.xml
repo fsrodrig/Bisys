@@ -15,29 +15,85 @@
         android:gravity="center_horizontal"
         android:text="@string/buscarTerminal"
         android:layout_margin="24dp"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:id="@+id/textView" />
 
     <!--  Name Label -->
     <EditText
         android:id="@+id/input_terminal"
-        android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/ingresarTerminal"
-        android:inputType="numberDecimal" />
-
-
-    <ImageButton
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:src="@drawable/bicycleButton"
-        android:scaleType="fitCenter"
-        android:paddingBottom="15dp"
-        android:layout_margin="20dp"
-        android:contentDescription="@string/buscar"
-        android:background="@drawable/round_button"
-        android:layout_alignParentBottom="true"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/textView"
         android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_terminal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+        <ImageButton
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/bicycleButton"
+            android:scaleType="fitCenter"
+            android:paddingBottom="15dp"
+            android:contentDescription="@string/buscar"
+            android:background="@drawable/round_button_red"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/imageButton2"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/imageButton"
+            android:layout_marginBottom="141dp" />
+
+        <ImageButton
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/bicycleButton"
+            android:scaleType="fitCenter"
+            android:paddingBottom="15dp"
+            android:contentDescription="@string/buscar"
+            android:background="@drawable/round_button"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/imageButton"
+            android:layout_alignTop="@+id/imageButton2"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/bicycleButton"
+            android:scaleType="fitCenter"
+            android:paddingBottom="15dp"
+            android:contentDescription="@string/buscar"
+            android:background="@drawable/round_button"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/imageButton3"
+            android:layout_alignTop="@+id/imageButton"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/bicycleButton"
+            android:scaleType="fitCenter"
+            android:paddingBottom="15dp"
+            android:contentDescription="@string/buscar"
+            android:background="@drawable/round_button"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/imageButton4"
+            android:layout_alignTop="@+id/imageButton"
+            android:layout_alignParentEnd="true" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>
