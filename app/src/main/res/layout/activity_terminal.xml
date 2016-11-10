@@ -19,14 +19,27 @@
         android:id="@+id/textView" />
 
     <!--  Name Label -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textView"
+        android:id="@+id/layoutTerminal">
     <EditText
         android:id="@+id/input_terminal"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="3"
         android:hint="@string/ingresarTerminal"
-        android:inputType="numberDecimal"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentEnd="true" />
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/buscar"
+        />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,7 +48,7 @@
         android:textSize="20sp"
         android:id="@+id/indicacion"
         android:layout_marginTop="16dp"
-        android:layout_below="@id/input_terminal"/>
+        android:layout_below="@id/layoutTerminal"/>
 
     <LinearLayout
         android:orientation="horizontal"

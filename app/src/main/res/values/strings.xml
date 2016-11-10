@@ -12,7 +12,8 @@
     <string name="dni">DNI</string>
     <string name="crear">Crear</string>
     <string name="email">E-mail</string>
-    <string name="buscar">Buscar Bici</string>
+    <string name="buscar">Buscar</string>
+    <string name="buscarBici">Buscar Bici</string>
     <string name="buscarTerminal">En que Terminal Estás?</string>
     <string name="ingresarTerminal">Ingresá el número de Terminal</string>
     <string name="elegir">Elegí la Bici a Reservar</string>
