@@ -1,0 +1,1 @@
+json.array! @terminal_entries, partial: 'terminal_entries/terminal_entry', as: :terminal_entry

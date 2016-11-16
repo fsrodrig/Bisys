@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>In date:</strong>
+  <%= @entry_bicycle.in_date %>
+</p>
+
+<p>
+  <strong>Out date:</strong>
+  <%= @entry_bicycle.out_date %>
+</p>
+
+<p>
+  <strong>Bicycle:</strong>
+  <%= @entry_bicycle.bicycle_id %>
+</p>
+
+<p>
+  <strong>Entry:</strong>
+  <%= @entry_bicycle.entry_id %>
+</p>
+
+<%= link_to 'Edit', edit_entry_bicycle_path(@entry_bicycle) %> |
+<%= link_to 'Back', entry_bicycles_path %>

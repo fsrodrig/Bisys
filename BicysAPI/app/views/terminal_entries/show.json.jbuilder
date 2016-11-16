@@ -1,0 +1,1 @@
+json.partial! "terminal_entries/terminal_entry", terminal_entry: @terminal_entry

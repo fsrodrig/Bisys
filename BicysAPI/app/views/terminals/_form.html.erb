@@ -1,0 +1,32 @@
+<%= form_for(terminal) do |f| %>
+  <% if terminal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(terminal.errors.count, "error") %> prohibited this terminal from being saved:</h2>
+
+      <ul>
+      <% terminal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_terminal %>
+    <%= f.text_field :id_terminal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :latitude %>
+    <%= f.number_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= f.label :longitude %>
+    <%= f.number_field :longitude %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+<%= form_for(reserve_state) do |f| %>
+  <% if reserve_state.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reserve_state.errors.count, "error") %> prohibited this reserve_state from being saved:</h2>
+
+      <ul>
+      <% reserve_state.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :reserve_state %>
+    <%= f.text_field :reserve_state %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

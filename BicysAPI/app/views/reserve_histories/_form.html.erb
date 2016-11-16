@@ -1,0 +1,37 @@
+<%= form_for(reserve_history) do |f| %>
+  <% if reserve_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reserve_history.errors.count, "error") %> prohibited this reserve_history from being saved:</h2>
+
+      <ul>
+      <% reserve_history.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :initial_date %>
+    <%= f.datetime_select :initial_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :final_date %>
+    <%= f.datetime_select :final_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reserve_state_id %>
+    <%= f.text_field :reserve_state_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id_reserve_id %>
+    <%= f.text_field :id_reserve_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

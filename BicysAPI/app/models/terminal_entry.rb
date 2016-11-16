@@ -1,0 +1,2 @@
+class TerminalEntry < ApplicationRecord
+end

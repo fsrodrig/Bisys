@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Station:</strong>
+  <%= @terminal_entry.station %>
+</p>
+
+<%= link_to 'Edit', edit_terminal_entry_path(@terminal_entry) %> |
+<%= link_to 'Back', terminal_entries_path %>

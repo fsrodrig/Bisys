@@ -1,0 +1,1 @@
+json.array! @reserve_histories, partial: 'reserve_histories/reserve_history', as: :reserve_history

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Entry Bicycles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>In date</th>
+      <th>Out date</th>
+      <th>Bicycle</th>
+      <th>Entry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entry_bicycles.each do |entry_bicycle| %>
+      <tr>
+        <td><%= entry_bicycle.in_date %></td>
+        <td><%= entry_bicycle.out_date %></td>
+        <td><%= entry_bicycle.bicycle_id %></td>
+        <td><%= entry_bicycle.entry_id %></td>
+        <td><%= link_to 'Show', entry_bicycle %></td>
+        <td><%= link_to 'Edit', edit_entry_bicycle_path(entry_bicycle) %></td>
+        <td><%= link_to 'Destroy', entry_bicycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entry Bicycle', new_entry_bicycle_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reserve: 2016-11-16 09:52:50
+  account_user: one
+  bicycle_idbicycle: one
+
+two:
+  reserve: 2016-11-16 09:52:50
+  account_user: two
+  bicycle_idbicycle: two

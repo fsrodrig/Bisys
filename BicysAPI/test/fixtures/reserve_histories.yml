@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  initial_date: 2016-11-16 09:53:57
+  final_date: 2016-11-16 09:53:57
+  reserve_state: one
+  id_reserve: one
+
+two:
+  initial_date: 2016-11-16 09:53:57
+  final_date: 2016-11-16 09:53:57
+  reserve_state: two
+  id_reserve: two

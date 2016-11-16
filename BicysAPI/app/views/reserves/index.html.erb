@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reserves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reserve</th>
+      <th>Account user</th>
+      <th>Bicycle idbicycle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reserves.each do |reserf| %>
+      <tr>
+        <td><%= reserf.reserve %></td>
+        <td><%= reserf.account_user %></td>
+        <td><%= reserf.bicycle_idbicycle %></td>
+        <td><%= link_to 'Show', reserf %></td>
+        <td><%= link_to 'Edit', edit_reserf_path(reserf) %></td>
+        <td><%= link_to 'Destroy', reserf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reserf', new_reserf_path %>

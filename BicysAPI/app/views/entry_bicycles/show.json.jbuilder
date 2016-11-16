@@ -1,0 +1,1 @@
+json.partial! "entry_bicycles/entry_bicycle", entry_bicycle: @entry_bicycle

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  in_date: 2016-11-16 09:51:11
+  out_date: 2016-11-16 09:51:11
+  bicycle_id: one
+  entry_id: one
+
+two:
+  in_date: 2016-11-16 09:51:11
+  out_date: 2016-11-16 09:51:11
+  bicycle_id: two
+  entry_id: two

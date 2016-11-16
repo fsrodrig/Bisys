@@ -1,0 +1,2 @@
+module TerminalEntriesHelper
+end

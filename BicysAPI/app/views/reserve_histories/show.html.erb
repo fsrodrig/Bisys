@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Initial date:</strong>
+  <%= @reserve_history.initial_date %>
+</p>
+
+<p>
+  <strong>Final date:</strong>
+  <%= @reserve_history.final_date %>
+</p>
+
+<p>
+  <strong>Reserve state:</strong>
+  <%= @reserve_history.reserve_state %>
+</p>
+
+<p>
+  <strong>Id reserve:</strong>
+  <%= @reserve_history.id_reserve %>
+</p>
+
+<%= link_to 'Edit', edit_reserve_history_path(@reserve_history) %> |
+<%= link_to 'Back', reserve_histories_path %>

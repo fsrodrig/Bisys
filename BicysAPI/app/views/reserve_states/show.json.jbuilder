@@ -1,0 +1,1 @@
+json.partial! "reserve_states/reserve_state", reserve_state: @reserve_state

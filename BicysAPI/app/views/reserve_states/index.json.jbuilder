@@ -1,0 +1,1 @@
+json.array! @reserve_states, partial: 'reserve_states/reserve_state', as: :reserve_state
