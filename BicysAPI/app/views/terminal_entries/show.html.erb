@@ -5,5 +5,10 @@
   <%= @terminal_entry.station %>
 </p>
 
+<p>
+  <strong>Terminal:</strong>
+  <%= @terminal_entry.terminal %>
+</p>
+
 <%= link_to 'Edit', edit_terminal_entry_path(@terminal_entry) %> |
 <%= link_to 'Back', terminal_entries_path %>

@@ -17,7 +17,7 @@ class TerminalEntriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create terminal_entry" do
     assert_difference('TerminalEntry.count') do
-      post terminal_entries_url, params: { terminal_entry: { station: @terminal_entry.station } }
+      post terminal_entries_url, params: { terminal_entry: { station: @terminal_entry.station, terminal_id: @terminal_entry.terminal_id } }
     end
 
     assert_redirected_to terminal_entry_url(TerminalEntry.last)
@@ -34,7 +34,7 @@ class TerminalEntriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update terminal_entry" do
-    patch terminal_entry_url(@terminal_entry), params: { terminal_entry: { station: @terminal_entry.station } }
+    patch terminal_entry_url(@terminal_entry), params: { terminal_entry: { station: @terminal_entry.station, terminal_id: @terminal_entry.terminal_id } }
     assert_redirected_to terminal_entry_url(@terminal_entry)
   end
 

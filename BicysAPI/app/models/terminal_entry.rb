@@ -1,3 +1,3 @@
 class TerminalEntry < ApplicationRecord
-belongs_to :terminal,  dependent: :destroy
+  belongs_to :terminal
 end

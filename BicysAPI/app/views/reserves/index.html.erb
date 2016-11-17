@@ -6,21 +6,21 @@
   <thead>
     <tr>
       <th>Reserve</th>
-      <th>Account user</th>
-      <th>Bicycle idbicycle</th>
+      <th>Account</th>
+      <th>Bicycle</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @reserves.each do |reserf| %>
+    <% @reserves.each do |reserve| %>
       <tr>
-        <td><%= reserf.reserve %></td>
-        <td><%= reserf.account_user %></td>
-        <td><%= reserf.bicycle_idbicycle %></td>
-        <td><%= link_to 'Show', reserf %></td>
-        <td><%= link_to 'Edit', edit_reserf_path(reserf) %></td>
-        <td><%= link_to 'Destroy', reserf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= reserve.reserve %></td>
+        <td><%= reserve.account %></td>
+        <td><%= reserve.bicycle %></td>
+        <td><%= link_to 'Show', reserve %></td>
+        <td><%= link_to 'Edit', edit_reserve_path(reserve) %></td>
+        <td><%= link_to 'Destroy', reserve, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,5 @@
 
 <br>
 
-<%= link_to 'New Reserf', new_reserf_path %>
+<%= link_to 'New reserve', new_reserf_path %>
+<%= link_to 'Index', root_path %>

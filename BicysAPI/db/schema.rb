@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161117113845) do
+ActiveRecord::Schema.define(version: 20161117141852) do
 
   create_table "accounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "username"
@@ -57,18 +57,20 @@ ActiveRecord::Schema.define(version: 20161117113845) do
 
   create_table "reserves", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.datetime "reserve"
-    t.integer  "accounts_id"
-    t.integer  "bicycles_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["accounts_id"], name: "index_reserves_on_accounts_id", using: :btree
-    t.index ["bicycles_id"], name: "index_reserves_on_bicycles_id", using: :btree
+    t.integer  "account_id"
+    t.integer  "bicycle_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_reserves_on_account_id", using: :btree
+    t.index ["bicycle_id"], name: "index_reserves_on_bicycle_id", using: :btree
   end
 
   create_table "terminal_entries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "station"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "terminal_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["terminal_id"], name: "index_terminal_entries_on_terminal_id", using: :btree
   end
 
   create_table "terminals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
@@ -93,6 +95,7 @@ ActiveRecord::Schema.define(version: 20161117113845) do
   add_foreign_key "entry_bicycles", "terminal_entries", column: "terminal_entries_id"
   add_foreign_key "reserve_histories", "reserve_states", column: "reserve_states_id"
   add_foreign_key "reserve_histories", "reserves", column: "reserves_id"
-  add_foreign_key "reserves", "accounts", column: "accounts_id"
-  add_foreign_key "reserves", "bicycles", column: "bicycles_id"
+  add_foreign_key "reserves", "accounts"
+  add_foreign_key "reserves", "bicycles"
+  add_foreign_key "terminal_entries", "terminals"
 end

@@ -69,6 +69,6 @@ class TerminalEntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def terminal_entry_params
-      params.require(:terminal_entry).permit(:station)
+      params.require(:terminal_entry).permit(:station, :terminal_id)
     end
 end

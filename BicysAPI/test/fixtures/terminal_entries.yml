@@ -2,6 +2,8 @@
 
 one:
   station: MyString
+  terminal: one
 
 two:
   station: MyString
+  terminal: two

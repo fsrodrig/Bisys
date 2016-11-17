@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Station</th>
+      <th>Terminal</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +15,9 @@
     <% @terminal_entries.each do |terminal_entry| %>
       <tr>
         <td><%= terminal_entry.station %></td>
+        <td><%= terminal_entry.terminal %></td>
         <td><%= link_to 'Show', terminal_entry %></td>
         <td><%= link_to 'Edit', edit_terminal_entry_path(terminal_entry) %></td>
-        <td><%= link_to 'Ocupar',
         <td><%= link_to 'Destroy', terminal_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

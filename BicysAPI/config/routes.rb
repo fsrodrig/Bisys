@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  resources :reserves
+  resources :terminal_entries
   resources :accounts
   resources :users
   root 'welcome#index'
   resources :reserve_histories
-  resources :reserves
   resources :entry_bicycles
-  resources :terminal_entries
   resources :terminals
   resources :reserve_states
   resources :bicycles
