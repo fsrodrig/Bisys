@@ -1,4 +1,4 @@
 class ReserveHistory < ApplicationRecord
-  belongs_to :reserve_state
-  belongs_to :id_reserve
+  has_many :reserve_state
+  has_many :reserve
 end

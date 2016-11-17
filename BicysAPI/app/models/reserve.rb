@@ -1,4 +1,5 @@
 class Reserve < ApplicationRecord
-  belongs_to :account_user
-  belongs_to :bicycle_idbicycle
+  has_many :account
+  has_many :bicycle
+  belongs_to :reserve_history
 end

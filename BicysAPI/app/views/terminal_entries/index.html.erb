@@ -16,6 +16,7 @@
         <td><%= terminal_entry.station %></td>
         <td><%= link_to 'Show', terminal_entry %></td>
         <td><%= link_to 'Edit', edit_terminal_entry_path(terminal_entry) %></td>
+        <td><%= link_to 'Ocupar',
         <td><%= link_to 'Destroy', terminal_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -25,3 +26,4 @@
 <br>
 
 <%= link_to 'New Terminal Entry', new_terminal_entry_path %>
+<%= link_to 'Index', root_path %>

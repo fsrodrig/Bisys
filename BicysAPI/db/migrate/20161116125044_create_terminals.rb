@@ -1,9 +1,9 @@
 class CreateTerminals < ActiveRecord::Migration[5.0]
   def change
-    create_table :terminals do |t|
+    change_table :terminals do |t|
       t.string :id_terminal
-      t.integer :latitude
-      t.integer :longitude
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end

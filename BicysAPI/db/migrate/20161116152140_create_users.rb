@@ -1,11 +1,11 @@
 class CreateUsers < ActiveRecord::Migration[5.0]
   def change
+  drop_table :users
     create_table :users do |t|
-      t.string :name, limit: 20
-      t.string :lastname, limit: 32
-      t.string :email, limit: 50
+      t.string :name
+      t.string :lastname
       t.integer :dni
-      t.references :account, foreign_key: true
+      t.string :email
 
       t.timestamps
     end

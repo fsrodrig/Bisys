@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161116125357) do
+ActiveRecord::Schema.define(version: 20161117113845) do
 
   create_table "accounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "user"
+    t.string   "username"
     t.string   "password"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_accounts_on_user_id", using: :btree
   end
 
   create_table "bicycles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
@@ -71,28 +73,26 @@ ActiveRecord::Schema.define(version: 20161116125357) do
 
   create_table "terminals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "id_terminal"
-    t.integer  "latitude"
-    t.integer  "longitude"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.float    "latitude",    limit: 24
+    t.float    "longitude",   limit: 24
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "name",       limit: 20
-    t.string   "lastname",   limit: 32
-    t.string   "email",      limit: 50
+    t.string   "name"
+    t.string   "lastname"
     t.integer  "dni"
-    t.integer  "account_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.index ["account_id"], name: "index_users_on_account_id", using: :btree
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "accounts", "users"
   add_foreign_key "entry_bicycles", "bicycles", column: "bicycles_id"
   add_foreign_key "entry_bicycles", "terminal_entries", column: "terminal_entries_id"
   add_foreign_key "reserve_histories", "reserve_states", column: "reserve_states_id"
   add_foreign_key "reserve_histories", "reserves", column: "reserves_id"
   add_foreign_key "reserves", "accounts", column: "accounts_id"
   add_foreign_key "reserves", "bicycles", column: "bicycles_id"
-  add_foreign_key "users", "accounts"
 end
